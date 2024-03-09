@@ -1,9 +1,16 @@
+import 'package:elimisha_trust_fund_app/components/my_button.dart';
 import 'package:elimisha_trust_fund_app/components/my_textfield.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatelessWidget
 {
-  const Login({super.key});
+  Login({super.key});
+
+  //text editing contrillers
+  final admissionController = TextEditingController();
+  final passwordController = TextEditingController();
+  //log user
+  void logUserIn() {}
 
   @override
   Widget build(BuildContext context)
@@ -32,14 +39,42 @@ class Login extends StatelessWidget
                   ),
 
                   //ADM no.
-              MyTextField(),
+              MyTextField(
+                controller: admissionController,
+                hintText: 'Admission No....' ,
+                obscureText: false,
+
+              ),
+
+                const SizedBox(height:10),
 
                   //Password
-             MyTextField(),
+             MyTextField(
+               controller: passwordController,
+               hintText: 'Password....',
+               obscureText: true,
+             ),
+
+              const SizedBox(height:10),
 
                   //forgot password
+              Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  child: Row(
+                   mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Text(
+                       'Forgot password? ',
+                        style: TextStyle(color: Colors.black),
+                       ),
+                     ],
+                    ),
+                   ),
 
+          const SizedBox(height:25),
                   //login button
+              MyButton(
+                  onTap: logUserIn),
                 ],
               ),
           ),
