@@ -9,7 +9,8 @@ class Login extends StatelessWidget
   //text editing contrillers
   final admissionController = TextEditingController();
   final passwordController = TextEditingController();
-  //log user
+
+  //log user in
   void logUserIn() {}
 
   @override
@@ -22,10 +23,11 @@ class Login extends StatelessWidget
         (
         child: Center
           (
+          child: SingleChildScrollView(
           child: Column
             (
             children: [
-              SizedBox(height: 50,),
+              SizedBox(height: 20,),
                   //Title
                   Text
                     (style: TextStyle(color: Colors.black          ) ,
@@ -33,6 +35,7 @@ class Login extends StatelessWidget
                      ),
 
                   //logo
+
                   Image.asset
                   (
                       'images/elimisha.jpg',
@@ -46,7 +49,7 @@ class Login extends StatelessWidget
 
               ),
 
-                const SizedBox(height:10),
+                const SizedBox(height:5),
 
                   //Password
              MyTextField(
@@ -79,6 +82,7 @@ class Login extends StatelessWidget
               ),
           ),
         ),
+      ),
       );
   }
 }

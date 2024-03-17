@@ -2,8 +2,9 @@ flutter_native_splash:
   color: "#00AF31"
   image: images/elimisha.jpg
 
+
 android_12:
-    color: "00AF31"
-    image: images/elimisha.jpg
+  color: "#00AF31"
+  image: images/elimisha.jpg
 
 web: false
