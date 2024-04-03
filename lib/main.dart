@@ -1,10 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'login.dart';
+
 
 
 
 void main()
 {
+
+
+  void main() {
+    WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+    FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+    runApp(MyApp());
+  }
+
+// whenever your initialization is completed, remove the splash screen:
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
  // FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   runApp(MyApp(
